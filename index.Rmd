@@ -1,14 +1,27 @@
 ---
-title: "AED dash mockup"
+title: "Victorian Aboriginal Economy"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
+    theme: 
+      version: 5
+      primary: "#38839e"
+      secondary: "#fdba4d"
+      info: "#acb44d"
+      success: "#fdba4d"
 ---
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(leaflet)
 library(sf)
+library(highcharter)
+
+primary <- "#38839e"
+secondary <- "#fdba4d"
+tertiary <- "#acb44d"
+
+
 ```
 
 Labour force
@@ -20,22 +33,22 @@ Row
 
 ### Unemployment rate
 ```{r}
-valueBox("X.X%", caption = "Unemployment rate")
+valueBox("X.X%", caption = "Unemployment rate", color = "success")
 ```
 
 ### Participation rate
 ```{r}
-valueBox("X.X%", caption = "Participation rate")
+valueBox("X.X%", caption = "Participation rate", color = "success")
 ```
 
 ### Employed
 ```{r}
-valueBox("Xk", caption = "Employed aboriginal Victorians")
+valueBox("Xk", caption = "Employed aboriginal Victorians", color = "success")
 ```
 
 ### Unemployed
 ```{r}
-valueBox("Xk", caption = "Unemployed aboriginal Victorians")
+valueBox("Xk", caption = "Unemployed aboriginal Victorians", color = "success")
 ```
 
 Row
@@ -71,19 +84,19 @@ Aboriginal firms
 
 Row
 -------------------------------------
-### Number of indegenous firms
+### Number of Aboriginal firms
 ```{r}
-valueBox("XX", caption = "Indegenous firms in Vic")
+valueBox("XX", caption = "Aboriginal firms in Vic", color = "success")
 ```
 
 ### Employment
 ```{r}
-valueBox("Xk", caption = "Employees in indegenous firms")
+valueBox("Xk", caption = "Employees in aboriginal firms", color = "success")
 ```
 
 ### Employed
 ```{r}
-valueBox("Xm", caption = "Total turnover")
+valueBox("Xm", caption = "Total turnover", color = "success")
 ```
 
 
